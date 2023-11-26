@@ -3,7 +3,7 @@
 ###
 
 <div align="center">
-  <img height="200" src="https://mp3-js-bitcode.netlify.app/assets/img/app-img.png"  />
+  <img src="https://mp3-js-bitcode.netlify.app/assets/img/app-img.png"  />
 </div>
 
 ###
