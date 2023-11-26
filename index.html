@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    
+    <div class="w-[300px] border border-gray-200 mx-auto mt-5 rounded-lg overflow-hidden">
+        <figure class="h-[250px]">
+            <img src="" id="music-photo" class="w-full h-full object-cover" alt="">
+        </figure>
+        <div class="bg-gray-100 p-4">
+            <div class="flex items-center">
+                <div class="flex-1">
+                    <p class="font-bold" id="name"></p>
+                    <small class="block" id="author"></small>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span class="text-orange-500 cursor-pointer">
+                        <i class="fa-solid fa-volume-high" id="volume"></i>
+                    </span>
+                    <div class="h-[3px] w-[70px] relative bg-gray-300 cursor-pointer" id="volumeControl">
+                        <div class="absolute w-[100%] h-[3px] bg-orange-500 top-0 left-0" id="volumeLevel"></div>
+                    </div>
+                </div> 
+            </div>
+            <div class="h-[60px] hidden" id="eqContent">
+                <img src="/assets/img/eq.gif" class="w-full h-full object-contain" alt="">
+            </div>
+            <div class="mt-5">
+                <audio src="" id="audio"></audio>
+                <div class="h-[3px] relative bg-gray-300 cursor-pointer" id="progressBarContent">
+                    <div class="absolute w-[0] h-[3px] bg-gray-600 top-0 left-0" id="progressBar"></div>
+                </div>
+                <div class="flex justify-between text-xs pt-1">
+                    <span id="startTime"></span>
+                    <span id="endTime"></span>
+                </div>
+                <div class="flex justify-center items-center space-x-4">
+                    <button id="btnPrev" class="flex items-center text-sm justify-center w-8 h-8 rounded-full bg-orange-500 text-white">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </button>
+
+                    <button id="btnPlay" class="flex items-center justify-center w-12 h-12 text-xl rounded-full bg-orange-500 text-white">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+
+                    <button id="btnNext" class="flex items-center text-sm justify-center w-8 h-8 rounded-full bg-orange-500 text-white">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </button>
+                </div>
+                <div class="mt-5 bg-gray-600 p-2 rounded-lg divide-y divide-gray-500" id="musicList"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/music.js"></script>
+    <script src="./assets/js/musicPlayer.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
